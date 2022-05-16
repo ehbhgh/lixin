@@ -1,0 +1,117 @@
+<view class="container">
+    <view style=' position: fixed; top: 0px;left:0px; width:100%;height:{{statusBarHeight+navBarHeight}}px;z-index:999'>
+        <view style="width:100%;height:{{statusBarHeight}}px;background-color:#88D0FF" class='statusBarHeight'></view>
+        <view class="nav_title_area" style="width:100%;height:{{navBarHeight}}px;background-color:#88D0FF">
+            <view class="nav_text" bindtap="navgatorHander">
+                <image src="../../images/icon/left_icon.png"></image>
+            </view>
+            <view class="nav_title">履约详情</view>
+        </view>
+    </view>
+    <view style="width:100%;height:{{statusBarHeight+navBarHeight}}px"></view>
+    <view class="top_box">
+        <view class="header detail">
+            <view class="title">报名信息</view>
+            <view class="icon"></view>
+        </view>
+        <view class="box">
+            <view>
+                <text>达人ID:</text>
+                <text>{{ performanceDetailDatas.uid}}</text>
+            </view>
+            <view>
+                <text>达人昵称:</text>
+                <text>{{ performanceDetailDatas.nickname}}</text>
+            </view>
+            <view hidden="{{!isShow}}">
+                <text>手机号:</text>
+                <text>{{performanceDetailDatas.mobile}}</text>
+            </view>
+            <view hidden="{{!isShow}}">
+                <text>微信号:</text>
+                <text>{{performanceDetailDatas.wxName}}</text>
+            </view>
+            <view>
+                <text>已选执行城市:</text>
+                <text>{{performanceDetailDatas.chosenCity}}</text>
+            </view>
+            <view>
+                <text>执行时间:</text>
+                <text>{{performanceDetailDatas.chosenAvailableTime}}</text>
+            </view>
+            <view>
+                <text>粉丝数:</text>
+                <text>{{performanceDetailDatas.fansCount}}</text>
+            </view>
+            <block wx:for="{{customerizedItems}}" wx:key='item'>
+                <view>
+                    <text>{{item.key}}:</text>
+                    <text>{{item.value}}</text>
+                </view>
+            </block>
+            <view class="write">
+                <view>备注:</view>
+                <view>
+                    <text space="{{true}}" decode='{{true}}'>
+                        {{performanceDetailDatas.remarks}}
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="top_box">
+        <view class="header detail">
+            <view class="title">商单详情</view>
+        </view>
+        <view class="box">
+            <view>
+                <text>商单名称:</text>
+                <text>{{performanceDetailDatas.activityName}}</text>
+            </view>
+            <view>
+                <text>执行平台:</text>
+                <text>{{performanceDetailDatas.platformName}}</text>
+            </view>
+            <view>
+                <text>粉丝要求:</text>
+                <text>{{performanceDetailDatas.fansMin}}~{{performanceDetailDatas.fansMax}}</text>
+            </view>
+            <view>
+                <text>执行时间:</text>
+                <text>{{performanceDetailDatas.availableTime}}</text>
+            </view>
+            <view>
+                <text>活动赠品:</text>
+                <text>{{performanceDetailDatas.gift}}</text>
+            </view>
+            <view>
+                <text>达人领域:</text>
+                <text>{{performanceDetailDatas.category}}</text>
+            </view>
+            <view>
+                <text>执行城市:</text>
+                <text class="city">{{performanceDetailDatas.cityString}}</text>
+            </view>
+        </view>
+        <view class="henx"></view>
+        <view class="headers detail">
+            <view class='title'>
+                <view class="icon"></view>
+                <text>活动详情:</text>
+            </view>
+            <text class="content_txt" space="true" user-select>
+                {{performanceDetailDatas.introduction}}
+            </text>
+        </view>
+        <view class="henx"></view>
+        <view class="headers detail">
+            <view class='title'>
+                <view class="icon"></view>
+                <text>内容产出要求:</text>
+            </view>
+            <text class="content_txt" space="true" user-select>
+                {{performanceDetailDatas.requirements}}
+            </text>
+        </view>
+    </view>
+</view>

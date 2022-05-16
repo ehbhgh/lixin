@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="girls-list-wrap">
+  <view class='girls-list clearfix' id="J_GirlsList">
+    <view class='item item-{{index}}' wx:for="{{group}}" wx:key="item">
+      <view class='a'>
+        <view class='item-wrap'>
+          <view class='img'>
+            <image src='{{item.show? item.src : item.def}}' class='{{item.show? "active" : ""}}'></image>
+          </view>
+          <view class='info'>
+            <view class="info">
+              <text class="name">美女</text>
+              <text class="city">这是一个美女</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<button bindtap='clicks'>跳转具体店铺页</button>
+
+<button bindtap='click1'>跳转团购详情</button>
+
+<button bindtap='click2'>跳转商户评价列表</button>
+
+<button bindtap='click2'>跳转商户评价详情</button>

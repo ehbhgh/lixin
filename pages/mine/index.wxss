@@ -1,0 +1,60 @@
+.container .box_container {
+  background-color: #88D0FF;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 20rpx 30rpx 20rpx;
+}
+.container .box_container .left_name {
+  display: flex;
+}
+.container .box_container .left_name image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.container .box_container .left_name view {
+  margin: 80rpx 0 0 20rpx;
+  font-size: 45rpx;
+  font-weight: 600;
+  color: #fff;
+}
+.container .box_container .right_name {
+  width: 140rpx;
+  height: 60rpx;
+  background-color: #f2f2f2;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 18rpx;
+}
+.contact_area {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 20rpx auto;
+  height: 400rpx;
+}
+.contact_area .border_style {
+  border-bottom: 4rpx solid #f2f2f2;
+  height: 200rpx !important;
+}
+.contact_area .contact_area_item {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.contact_area .contact_area_item .contact_area_image {
+  display: flex;
+  align-items: center;
+}
+.contact_area .contact_area_item .contact_area_image image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.contact_area .contact_area_item .contact_area_image view {
+  margin-left: 30rpx;
+}
+.contact_area .contact_area_item .contact_area_image .text {
+  font-size: 30rpx;
+}

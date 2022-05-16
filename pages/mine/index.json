@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-panel": "../../../plugin_vant/panel/index",
+    "van-grid": "../../../plugin_vant/grid/index",
+    "van-grid-item": "../../../plugin_vant/grid-item/index",
+    "van-icon": "../../../plugin_vant/icon/index",
+    "van-nav-bar": "../../../plugin_vant/nav-bar/index",
+    "van-dialog": "../../../plugin_vant/dialog/index"
+  },
+  "navigationBarTitleText": "我的"
+}

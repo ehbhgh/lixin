@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-field": "../../../plugin_vant/field/index",
+    "van-toast": "../../../plugin_vant/toast/index",
+    "van-overlay":"../../../plugin_vant/overlay/index",
+    "van-button":"../../../plugin_vant/button/index",
+    "van-checkbox": "../../../plugin_vant/checkbox/index",
+    "van-checkbox-group": "../../../plugin_vant/checkbox-group/index",
+    "van-popup": "../../../plugin_vant/popup/index"
+  },
+  "navigationBarTitleText": "添加名片"
+}

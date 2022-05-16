@@ -1,0 +1,393 @@
+page {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+}
+page .container {
+  background-color: #f2f2f2;
+  width: 100%;
+}
+page .container .nav_title_area {
+  position: relative;
+  color: #fff;
+}
+page .container .nav_title_area .nav_text {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 50%;
+  left: 20rpx;
+  transform: translateY(-50%);
+}
+page .container .nav_title_area .nav_text image {
+  width: 100%;
+  height: 100%;
+}
+page .container .nav_title_area .nav_title {
+  position: absolute;
+  top: 50%;
+  left: 100rpx;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 28rpx;
+}
+page .container .detail .title {
+  padding-top: 20rpx;
+}
+page .container .detail .title .icon {
+  height: 40rpx;
+  width: 2rpx;
+  background-color: #88D0FF;
+  padding-left: 10rpx;
+  margin-right: 10rpx;
+}
+page .container .header {
+  width: 710rpx;
+  margin: 20rpx auto 20rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+page .container .header .title {
+  font-size: 28rpx;
+  font-weight: bold;
+  padding-left: 20rpx;
+  height: 40rpx;
+  width: 400rpx;
+  line-height: 40rpx;
+}
+page .container .header .content_txt {
+  width: 94%;
+  display: block;
+  line-height: 50rpx;
+  margin: 0 auto 0rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  font-size: 26rpx;
+  font-family: '宋体';
+  letter-spacing: 4rpx;
+  word-break: break-all;
+}
+page .container .logo_area {
+  padding-bottom: 20rpx;
+  width: 710rpx;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+page .container .logo_area .iconbg {
+  display: flex;
+  padding: 20rpx;
+  align-items: center;
+}
+page .container .logo_area .iconbg .title {
+  height: 85rpx;
+  width: 550rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 85rpx;
+}
+page .container .logo_area .iconbg image {
+  width: 70rpx;
+  height: 70rpx;
+}
+page .container .logo_area .iconbg .dy {
+  width: 59rpx;
+  height: 59rpx;
+}
+page .container .logo_area .iconbg .bz {
+  width: 70rpx;
+  height: 70rpx;
+}
+page .container .logo_area .tag {
+  display: flex;
+}
+page .container .logo_area .tag view {
+  width: 120rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 13rpx;
+  margin-left: 40rpx;
+}
+page .container .logo_area .requre_area {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+page .container .logo_area .requre_area .sal {
+  color: #7d7d7d;
+}
+page .container .logo_area .requre_area .sal > view:nth-child(2) {
+  background-color: rgba(242, 242, 242, 0.7);
+}
+page .container .logo_area .requre_area .sal > view:nth-child(2) text {
+  color: #8b8a8a;
+  font-size: 26rpx;
+  padding-left: 5rpx;
+}
+page .container .logo_area .requre_area .require_item {
+  display: flex;
+  margin-top: 14rpx;
+}
+page .container .logo_area .requre_area .require_item > view:nth-child(1) {
+  width: 150rpx;
+  margin-left: 40rpx;
+  color: #7a7a7a;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+page .container .logo_area .requre_area .require_item > view:nth-child(2) {
+  width: 600rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.btn_area {
+  position: fixed;
+  bottom: 0rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100rpx;
+  width: 750rpx;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 0 2rpx 2rpx rgba(177, 174, 174, 0.1);
+}
+.btn_area .btn_box {
+  flex: 5;
+  border-left: 2rpx solid rgba(97, 94, 94, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_area .btn_box .border {
+  width: 2rpx;
+  height: 100%;
+  background-color: rgba(97, 94, 94, 0.1);
+}
+.btn_area .btn_box .join_home {
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #88D0FF;
+  position: relative;
+}
+.btn_area .btn_box .join_home .txt {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2rpx;
+  font-size: 25rpx !important;
+  width: 260rpx;
+}
+.btn_area .btn_box .join_home .icons {
+  font-size: 40rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -14rpx;
+}
+.btn_area .btn_box .btn_area_item {
+  width: 356rpx;
+  margin-left: 20rpx;
+  background-color: #fff;
+  border: 4rpx solid #88D0FF;
+  color: #88D0FF;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 50rpx;
+}
+.btn_area .home_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200rpx;
+  height: 100rpx;
+  color: #aaa;
+}
+.btn_area .home_item > view:nth-of-type(1) {
+  font-size: 50rpx;
+  font-weight: 600;
+  color: #aaa;
+  padding-top: 10rpx;
+}
+.btn_area .home_item > view:nth-of-type(2) {
+  width: 100rpx !important;
+  height: 70rpx !important;
+  text-align: center !important;
+  line-height: 29rpx;
+  font-size: 25rpx !important;
+  border: none !important;
+  outline: none !important;
+  position: static !important;
+  padding: 0 0 15rpx 0 !important;
+  margin: 0 !important;
+  color: #aaa !important;
+}
+.btn_area .share_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200rpx;
+  height: 98rpx;
+  border: 2rpx solid #fff !important;
+}
+.btn_area .share_item .btn {
+  width: 100rpx !important;
+  height: 96rpx !important;
+  text-align: center !important;
+  line-height: 40rpx;
+  font-size: 25rpx !important;
+  outline: none !important;
+  padding: 0 !important;
+  position: relative !important;
+  border: 2rpx solid #fff !important;
+  margin: 0 !important;
+  color: #aaa !important;
+  background-color: #fff !important;
+  position: absolute !important;
+}
+.btn_area .share_item .btn > view:nth-of-type(1) {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #aaa;
+  padding-top: 10rpx;
+}
+.van-dialog__header {
+  font-size: 39rpx;
+  font-weight: bold;
+}
+.van-dialog__message-text {
+  font-size: 39rpx;
+  background-color: #fff !important;
+}
+.wx_area {
+  display: flex;
+  position: fixed;
+  right: 30rpx;
+  bottom: 250rpx;
+  width: 95rpx;
+  height: 95rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none !important;
+  background: #88D0FF;
+}
+.wx_area > view:nth-child(1) {
+  font-size: 34rpx;
+  height: 30rpx;
+  color: #fff;
+  line-height: 55rpx;
+}
+.wx_area > view:nth-child(2) {
+  width: 130rpx;
+  font-size: 20rpx;
+  color: #fff;
+  height: 50rpx;
+}
+button::after {
+  border: none;
+}
+.area {
+  width: 600rpx;
+  height: 150rpx;
+  margin: 100rpx auto;
+}
+.area .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.area .btn button {
+  color: #88D0FF;
+}
+.area .content {
+  width: 92%;
+  margin: 20rpx auto;
+  line-height: 45rpx;
+  text-align: left;
+}
+.share_box {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx auto;
+}
+.share_box .sharearea {
+  position: relative;
+  width: 300rpx;
+  height: 200rpx;
+}
+.share_box .sharearea .txt1 {
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  font-size: 24rpx;
+  transform: translateX(-50%);
+}
+.share_box .h5 {
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.share_box .h5 image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 150rpx;
+}
+.share_box .h5 view {
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}
+button[type=primary][plain] {
+  font-size: 70rpx;
+  border: none;
+}
+.cancel {
+  width: 95%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  background-color: #fff;
+  margin: 20rpx auto;
+  color: #68b4e7;
+}
+.van-dialog__message-text {
+  display: inline-block;
+  width: 500rpx;
+  font-size: 28rpx;
+  background-color: #f2f2f2;
+  color: #949494;
+  padding: 20rpx 15rpx;
+}
+.van-button__text {
+  color: #88D0FF;
+}
+.van-hairline--right .van-button__text {
+  color: #000;
+}
+.van-dialog__header {
+  font-weight: 600;
+  font-size: 40rpx;
+  color: #666363;
+  font-family: '黑体';
+}

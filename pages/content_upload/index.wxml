@@ -1,0 +1,85 @@
+<wxs src="../../wxs/filter.wxs" module="util"></wxs>
+<view class="container {{noScroll?'noScrolling':''}}" >
+    <!-- 内容要求 -->
+    <view class="content_require">
+        <view class="content_require_header">内容要求</view>
+        <view class="content_require_content">
+            <view>
+                <text>是否要上传视频：</text>
+                <text>{{initList.video_num==1?'是':'否'}}</text>
+            </view>
+            <view>
+                <text>上传图片张数：</text>
+                <text>{{initList.picture_num}}</text>
+            </view>
+            <view>
+                <text>字数要求：</text>
+                <text>{{initList.content_requirement_num}}</text>
+            </view>
+            <view class="detail_request_area">
+                <view>内容具体要求:</view>
+                <view>{{initList.content_requirement}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 上传区域 -->
+    <view class="content_require">
+        <view class="content_require_header">上传</view>
+        <view class="content_upload_area">
+            <view class="title_area">
+                <view>标题:</view>
+                <input type="text" placeholder="请输入标题" value="{{title}}" data-value="title" bindinput="titleInput" disabled="{{isDisable}}"></input>
+            </view>
+            <view class="topic_area">
+                <view>话题:</view>
+                <input type="text" placeholder="请输入话题" value="{{topic}}" data-value="topic" bindinput="topicInput" disabled="{{isDisable}}"></input>
+            </view>
+            <view class="text_upload_area">
+                <view>上传文字:</view>
+                <textarea placeholder="请输入文字信息" value="{{words}}" data-value="words" bindinput="wordsInput" maxlength='40000' disabled="{{isDisable}}" />
+            </view>
+        </view>
+    </view>
+
+    <!-- 上传图片区域 -->
+    <view class="img_area_uploader" wx:if="{{initList.picture_num>0&&initList.picture_num<=20}}">
+        <view class="optClass">
+            <view class='optName'>上传图片:</view>
+        </view>
+        <view class="optClass" style='padding:0 30rpx;flex-wrap:wrap;'>
+            <view class='uploadimgbox' wx:for="{{upImgArr}}" wx:key="item">
+                <image class='uploadimg' src='{{item.path}}' data-presrc="{{item.path}}" bindtap='previewImg' mode='aspectFill'></image>
+                <cover-view class='delbtn' data-index="{{index}}" data-type="image" bindtap='delFile'>
+                    X
+                </cover-view>
+            </view>
+            <view class='uploadimgbox' wx:if="{{upFilesBtn}}">
+                <image class='uploadbtn' bindtap='uploadFiles' src='../../images/mine/addimgsbtn.png'></image>
+            </view>
+        </view>
+    </view>
+
+    <!-- 上传视频区域 -->
+    <view class="vedio_area_uploader" wx:if="{{initList.video_num===1}}">
+        <view class="optClass">
+            <view class='optName'>上传视频:<text style="color:red;padding-left:11rpx">(可选项)</text></view>
+        </view>
+        <view class="optClass" style='padding:0 30rpx;flex-wrap:wrap;'>
+            <view class='uploadimgbox' wx:for="{{upVideoArr}}" wx:key="item">
+                
+                <video class='uploadimg' src="{{upVideoArr[0].tempFilePath}}"  controls></video>
+                   <!-- <cover-image class="imgs"  src="{{upVideoArr[0].thumbTempFilePath}}" ></cover-image> -->
+                <cover-view class='delbtn' data-index="{{index}}" data-type="video" bindtap='delFile'>
+             
+                    X
+                </cover-view>
+            </view>
+            <view class='uploadimgbox' wx:if="{{!upVideoArr||upVideoArr.length<=0}}">
+                <image class='uploadbtn' bindtap='uploadVedioFiles' src='../../images/mine/addimgsbtn.png'></image>
+            </view>
+        </view>
+    </view>
+    <view class="btn_area" bindtap="uploadPlayer">上传</view>
+</view>
+<van-dialog id="van-dialog" />
+<van-overlay show="{{ overlayShow }}"  />

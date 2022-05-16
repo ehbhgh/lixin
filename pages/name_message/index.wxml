@@ -1,0 +1,205 @@
+<!-- 抖音 -->
+<view class="douyin content" wx:if='{{id==1}}'>
+    <view class="header">如何获取抖音名片信息？</view>
+   <view class="box">
+       <view class="first">/第一步/</view>
+          <view class="title">打开抖音APP,进入我的资料页,点击右上角的菜单图标,下方可获取ID以及昵称</view>
+       <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/douyin_first.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第二步/</view>
+              <view class="title">找到右下角"更多功能",点击"更多功能"</view>
+       <view class="title"></view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/douyin_second.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第三步/</view>
+              <view class="title">找到"我的二维码",点击"我的二维码"</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/douyin_third.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第四步/</view>
+         <view class="title">在我的"我的二维码"页面找到这个箭头图标，点击它</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/douyin_fourthird.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+    <view class="box bottom">
+       <view class="first">/第五步/</view>
+          <view class="title">点击复制链接，即可获得抖音链接</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/douyin_fiveth.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+</view>
+
+<!-- 微博 -->
+<view class="douyin content" wx:if='{{id==2}}' >
+    <view class="header">如何获取微博名片信息？</view>
+   <view class="box">
+       <view class="first">/第一步/</view>
+          <view class="title">打开微博APP,进入我的资料页,点击左上角的头像图标,进入个人主页</view>
+       <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/weibo_first.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第二步/</view>
+              <view class="title">左上方为"昵称",在个人主页点击右上角的"..."</view>
+       <view class="title"></view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/weibo_second.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第三步/</view>
+              <view class="title">点击"复制链接"即可获得微博链接</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/weibo_third.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+     <view class="box">
+       <view class="first">/第四步/</view>
+              <view class="title">获取链接后,链接后面的数字就是ID</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/weibo_fourth.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+
+</view>
+
+<!-- 小红书 -->
+<view class="douyin content"  wx:if='{{id==3}}' >
+    <view class="header">如何获取小红书名片信息？</view>
+   <view class="box">
+       <view class="first">/第一步/</view>
+          <view class="title">打开小红书APP,进入我的资料页,点击右上角分享图标,正上方为小红书号和昵称</view>
+       <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/redBook_first.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第二步/</view>
+              <view class="title">在弹出菜单链接"复制链接"即可获得小红书链接</view>
+       <view class="title"></view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/redBook_second.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+   
+
+</view>
+
+<!-- 大众点评 -->
+<view class="douyin content" wx:if='{{id==4}}'>
+    <view class="header">如何获取大众点评名片信息？</view>
+   <view class="box">
+       <view class="first">/第一步/</view>
+          <view class="title">打开大众点评APP,进入我的资料页,点击左上角的头像图标,左上方可获取昵称</view>
+       <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/dianping_first.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第二步/</view>
+              <view class="title">找到右上角分享图标,点击右上角分享图标</view>
+       <view class="title"></view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/dianping_second.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第三步/</view>
+              <view class="title">在弹出菜单链接"复制链接"即可获得大众点评链接</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/dianping_third.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+       <view class="box">
+       <view class="first">/第四步/</view>
+              <view class="title">获取链接后,链接后面的数字就是大众点评的ID</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/dianping_fourth.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+    
+    
+   
+</view>
+
+<!-- B站 -->
+<view class="douyin content" wx:if='{{id==5}}'>
+    <view class="header">如何获取Blibli名片信息？</view>
+   <view class="box">
+       <view class="first">/第一步/</view>
+          <view class="title">打开BlibliAPP,进入我的资料页,点击头像图标,下方可获取ID以及昵称</view>
+       <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/blibli_first.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第二步/</view>
+              <view class="title">点击右上角"..."图标</view>
+       <view class="title"></view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/blibli_second.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+    
+    <view class="box bottom">
+       <view class="first">/第三步/</view>
+          <view class="title">在弹出菜单链接"复制链接"即可获得Blibli链接</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/blibli_third.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+   <view class="box bottom">
+       <view class="first">/第四步/</view>
+          <view class="title">打开BlibliAPP,进入我的资料页，点击下方设置</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/blibli_fourth.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+   <view class="box bottom">
+       <view class="first">/第五步/</view>
+          <view class="title">找到账号资料,点击它</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/blibli_fiveth.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+   <view class="box bottom">
+       <view class="first">/第六步/</view>
+          <view class="title">找到UID,它就是ID</view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/blibli_sixth.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+</view>
+
+<!-- 快手 -->
+<view class="douyin content"   wx:if='{{id==6}}'>
+    <view class="header">如何获取快手名片信息？</view>
+   <view class="box">
+       <view class="first">/第一步/</view>
+          <view class="title">打开快手APP,进入我的资料页,点击右上角分享图标,正上方为快手的ID号和昵称</view>
+       <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/kuaishou_first.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+      <view class="box">
+       <view class="first">/第二步/</view>
+              <view class="title">在弹出菜单链接"复制链接"即可获得快手链接</view>
+       <view class="title"></view>
+            <image class="" src="https://wxmcnbucket-1259537042.cos.ap-shanghai.myqcloud.com/kuaishou_second.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+           
+       </image>
+   </view>
+  
+
+</view>

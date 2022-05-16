@@ -1,0 +1,75 @@
+<view class="container">
+    <!-- //头部标题 -->
+    <view class="box_container" wx:if='{{isLogin}}'>
+        <view class="left_name" bindtap="login">
+            <image class="" src="{{personMessage.avatar}}"></image>
+            <view class='box_area'>
+                <view class="box_item">
+                    {{personMessage.nickname}}
+                    <text class="iconfont icon-youjiantou"></text>
+                </view>
+                <view class="bov_title">点击登录/注册</view>
+            </view>
+        </view>
+    </view>
+    <view class="box_container" wx:if='{{!isLogin}}'>
+        <view class="left_name">
+            <image class="" src="{{personMessage.avatar}}"></image>
+            <view class='box_area'>
+                <view class="box_item">{{personMessage.nickname}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 名片区域 -->
+    <view class='bt'>
+        <view class="contact_area">
+            <view class="contact_area_item border_style" bindtap="seeName">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/my_name.png"></image>
+                    <view class="text">我的名片</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="contact_area_item border_style" bindtap="seeShoplist">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/money.png"></image>
+                    <view class="text">我参与的商单</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="contact_area_item border_style" bindtap="seewxArea">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/wx.png"></image>
+                    <view class="text">加入社群</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="contact_area_item border_style" bindtap="aboutMine">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/about_mine.png"></image>
+                    <view class="text">关于我们</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="contact_area_item" bindtap="linkService">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/contact_service.png"></image>
+                    <view class="text">联系客服</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+    <!-- 联系客服的弹出框 -->
+    <van-dialog id="van-dialog" />
+    <van-popup show="{{  isshow }}" round closeable custom-style="height: 350rpx" bind:close="onClose">
+        <view class="area">
+            <view class="content">进入客服窗口，发送数字1，获取通告管理员微信二维码，加好友后邀请进入通告群.</view>
+            <view class="btn">
+                <button open-type="contact" bindcontact="handleContact" show-message-card send-message-title="获取力心商单社群二维码" send-message-img='../../images/mine/login.png' send-message-path="/pages/homes/index">
+                    前往加群
+                </button>
+            </view>
+        </view>
+    </van-popup>
+</view>

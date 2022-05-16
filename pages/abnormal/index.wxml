@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="">未知异常,请联系管理员哦~</view>
+    <view class="bt_area">
+        <image class="" src="../../images/mine/error.png"></image>
+        <view bindtap="linkPersonhandle">联系管理员</view>
+    </view>
+</view>
+<van-dialog id="van-dialog" />
+   <view bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"class='box2'></view>
+   

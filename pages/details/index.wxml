@@ -1,0 +1,127 @@
+<view class="container">
+    <van-dialog message="{{ismessage}}" title="提示" show="{{ isshow }}" bind:confirm="getUserInfos" confirmButtonText="确定" custom-style="font-size:26rpx"></van-dialog>
+    <view style=' position: fixed; top: 0px;left:0px; width:100%;height:{{statusBarHeight+navBarHeight}}px;z-index:999'>
+        <view style="width:100%;height:{{statusBarHeight}}px;background-color:#88D0FF" class='statusBarHeight'></view>
+        <view class="nav_title_area" style="width:100%;height:{{navBarHeight}}px;background-color:#88D0FF">
+            <view class="nav_text" bindtap="navgatorHander">
+                <image src="../../images/icon/left_icon.png"></image>
+            </view>
+            <view class="nav_title">商单详情</view>
+        </view>
+    </view>
+    <view style="width:100%;height:{{statusBarHeight+navBarHeight}}px"></view>
+    <view class="" hover-class="none" hover-stop-propagation="false" wx:if='{{isForbiden}}' style='background:#fff;height:100vh'>
+        <van-skeleton title avatar row="17" />
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false" wx:else style='padding-bottom: 120rpx;'>
+        <view class="header logo_area">
+            <view class="iconbg">
+                <image class="dp" src="{{detailData.logoUrl}}" wx:if='{{detailData.platformId==1}}' mode='widthFix'></image>
+                <image class="hs" src="{{detailData.logoUrl}}" wx:if='{{detailData.platformId==2}}' mode='widthFix'></image>
+                <image class="dy" src="{{detailData.logoUrl}}" wx:if='{{detailData.platformId==3}}' mode='widthFix'></image>
+                <image class="wb" src="{{detailData.logoUrl}}" wx:if='{{detailData.platformId==4}}' mode='widthFix'></image>
+                <image class="ks" src="{{detailData.logoUrl}}" wx:if='{{detailData.platformId==5}}' mode='widthFix'></image>
+                <image class="bz" src="{{detailData.logoUrl}}" wx:if='{{detailData.platformId==6}}' mode='widthFix' style='height:19px'></image>
+                <view class='title'>{{detailData.activityName}}</view>
+            </view>
+            <view class="tag">
+                <view wx:for="{{detailData.tags}}" wx:key='item' style='color: #2734e7;background-color: #d6e7f7'>
+                    {{item}}
+                </view>
+            </view>
+            <view class="requre_area">
+                <view class="require_item">
+                    <view>粉丝要求:</view>
+                    <view>{{detailData.fansMin}}~{{detailData.fansMax}}</view>
+                </view>
+                <view class="require_item">
+                    <view>执行时间:</view>
+                    <view>{{detailData.availableTime}}</view>
+                </view>
+                <view class="require_item">
+                    <view>活动赠品:</view>
+                    <view>{{detailData.gift}}</view>
+                </view>
+                <view class="require_item ">
+                    <view>活动费用:</view>
+                    <view>{{detailData.commission}}</view>
+                </view>
+                <view class="require_item">
+                    <view>达人领域:</view>
+                    <view>{{detailData.category}}</view>
+                </view>
+                <view class="require_item">
+                    <view>执行城市:</view>
+                    <view>{{detailData.cityString}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="header detail">
+            <view class='title'>
+                <text class="icon"></text>
+                <text>活动详情</text>
+            </view>
+            <text class="content_txt" space="true" user-select>{{detailData.introduction}}</text>
+        </view>
+        <view class="header detail">
+            <view class='title'>
+                <text class="icon"></text>
+                <text>内容产出要求</text>
+            </view>
+            <text class="content_txt" space="true" user-select>{{detailData.requirements}}</text>
+        </view>
+        <view class="btn_area">
+            <view class="home_item" catchtap="navgatorHander">
+                <view class="iconfont icon-home"></view>
+                <view class="btn">首页</view>
+            </view>
+            <view class="share_item">
+                <!-- <button open-type="share" class="btn" style="border:0;" plain="true">
+                    <view class="iconfont icon-fenxiang"></view>
+                    <view>分享</view>
+                </button> -->
+                <button catchtap='sharePlay' class="btn" style="border:0;" plain="true">
+                    <view class="iconfont icon-fenxiang"></view>
+                    <view>分享</view>
+                </button>
+                <!-- <canvas style="position: absolute; top: -1000px; left: -1000px; width: 875px; height: 700px; background: #fff;" canvas-id="canvas"></canvas> -->
+            </view>
+            <view class="btn_box">
+                <button class="join_home" style="border:0;" plain="true" catchtap='proptArea'>
+                    <view class=" icons iconfont icon--shequ"></view>
+                    <view class='txt'>加入社群</view>
+                </button>
+                <view class="border"></view>
+                <!-- <canvas style="position: absolute; top: -1000px; left: -1000px; width: 875px; height: 700px; background: #fff;" canvas-id="canvas"></canvas> -->
+                <button class="btn_area_item" bind:tap="signUphandle" disabled="{{ show}}">
+                    报名
+                </button>
+            </view>
+        </view>
+    </view>
+</view>
+<van-dialog id="van-dialog" />
+<van-dialog message="{{message}}" title="提示" show="{{ show }}" show-cancel-button bind:cancel="onClose" bind:confirm="getUserInfo" cancelButtonText="返回上一层" confirmButtonText="去绑定名片" custom-style="font-size:26rpx"></van-dialog>
+<van-popup show="{{  isPropt}}" round closeable custom-style="height: 350rpx" bind:close="closed">
+    <view class="area">
+        <view class="content">进入客服窗口，发送数字1，获取通告管理员微信二维码，加好友后邀请进入通告群.</view>
+        <view class="btn">
+            <button open-type="contact" show-message-card send-message-title="获取力心商单社群二维码" send-message-img='../../images/mine/login.png' send-message-path="/pages/homes/index">
+                前往加群
+            </button>
+        </view>
+    </view>
+</van-popup>
+<van-popup show="{{  showShare}}" overlay='{{false}}' duration='100' custom-style='background:rgb(244,246,245);border:1px solid #ccc' round position='bottom'>
+    <view class="share_box">
+        <view class='sharearea'>
+            <button open-type="share" type='primary' class='iconfont icon-weixin2' plain="true"></button>
+            <view class='txt1'>分享小程序</view>
+        </view>
+        <view class="h5" bindtap='shareH5'>
+            <image class="" src="../../images/mine/link.png"></image>
+            <view >分享h5链接</view>
+        </view>
+    </view>
+    <view class="cancel" bindtap='cancelPlay'>取消</view>
+</van-popup>

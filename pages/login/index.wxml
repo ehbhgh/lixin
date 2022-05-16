@@ -1,0 +1,26 @@
+<view >
+ <view >
+  <view class='header'>
+   <image src='../../images/mine/login.png'></image>
+        <view class="title" >
+           力心履约助手 
+        </view>
+  </view>
+  
+  <view class='content'>
+   <view>本应用为我司内部管理系统</view>
+   <text>·你的信息用于识别是否是我司签约达人</text>
+   <text>·你的信息用于在应用内展示个人头像昵称</text>
+  </view>
+  
+  <button class='bottom' type='primary'  lang="zh_CN" bindtap="getUserProfile" disabled='{{isDisabled}}'>
+   微信一键登录
+  </button>
+ </view>
+ <!-- <view wx:else>请升级微信版本</view> -->
+</view>
+
+<!-- 网络异常 -->
+<van-toast id="van-toast" />
+  
+

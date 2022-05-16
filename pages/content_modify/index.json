@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-uploader": "/plugin_vant/uploader/index",
+    "van-dialog": "/plugin_vant/dialog/index",
+    "van-overlay": "/plugin_vant/overlay/index"
+  },
+  "navigationBarTitleText": "修改内容"
+}

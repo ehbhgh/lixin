@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="img_area">
+        <image src="../../images/mine/examine.png"></image>
+    </view>
+    <view>已提交报名信息，等待审核结果</view>
+    <view class="btn_home btn" bindtap='returnHome'> <text class='iconfont icon-back'></text> 返回首页</view>
+    <view class="btn_wx_area btn" bindtap="seewxArea" ><text class='iconfont icon-kefu'></text>加群及时获取优质通告</view>
+</view>
+
+    <van-popup show="{{  isshow }}" round closeable custom-style="height: 350rpx" bind:close="onClose">
+        <view class="area">
+            <view class="content">进入客服窗口，发送数字1，获取通告管理员微信二维码，加好友后邀请进入通告群.</view>
+            <view class="btn">
+                <button open-type="contact"  show-message-card send-message-title="获取力心商单社群二维码"
+                 send-message-img='../../images/mine/login.png'
+                 send-message-path="/pages/successful_regist/index">
+                    前往加群
+                </button>
+            </view>
+        </view>
+    </van-popup>

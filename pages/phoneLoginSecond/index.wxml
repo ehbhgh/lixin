@@ -1,0 +1,22 @@
+<view>
+   <view class='box'>
+      <view class='img'>
+            <image src="{{ personMessage.avatar}}" mode="widthFix"></image>
+      </view>
+      <view class='area'>
+         <view>.昵称：</view>
+         <view>{{personMessage.nickname}}</view>
+      </view>
+      <!-- <view class='area'>
+         <view>.性别：</view>
+         <view>{{personMessage.gender}}</view>
+      </view>
+       -->
+   </view>
+    <button class='bottom' lang="zh_CN" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+         微信授权一键登录
+      </button>
+</view>
+<!-- 网络异常 -->
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />

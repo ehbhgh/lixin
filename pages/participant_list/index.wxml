@@ -1,0 +1,95 @@
+<view class="container" wx:if='{{isForbiden}}'>
+    <view class="header">
+        <view class="bread_crumb">
+            <block wx:for="{{titleArr}}" wx:key="item" wx:for-index="index">
+                <view class="{{selectValue===index?'sureColor':''}}" wx:if="{{item!='未入选'}}" bindtap="changeState" data-value="{{index}}">
+                    {{item}}
+                </view>
+                <view class="iconfont icon-youjiantou" wx:if="{{item!=='已完成'&&item!=='未入选'}}"></view>
+            </block>
+        </view>
+        <view class="select" wx:if="{{selectShower}}">
+            <view class="select_item">筛选：</view>
+            <van-dropdown-menu>
+                <van-dropdown-item value="{{value}}" options="{{options}}" bindchange="selectValue" data-text="{{value}}" style='font-size:28rpx' z-index="{{100}}" />
+            </van-dropdown-menu>
+        </view>
+    </view>
+    <view class="box_contain" wx:for="{{listDatas}}" wx:key="item">
+        <navigator hover-class="none" url="/pages/performancedetail/index?contractId={{item.contractId}}">
+            <view class="box_title">
+                <view class="img_area">
+                    <image class="" src="{{item.logoUrl}}" mode='widthFix'></image>
+                </view>
+                <text class='txt'>{{item.activityName}}</text>
+            </view>
+            <view class="box_place">
+                <view>执行城市:</view>
+                <view>{{item. cityString}}</view>
+            </view>
+            <view class="box_sal">
+                <view>预约执行时间:</view>
+                <view>{{item.availableTime}}</view>
+            </view>
+            <view class="seal">
+                <view wx:if="{{item.state==1}}">
+                    <view class="iconfont icon-weitongguo-tuzhang1x bg know"></view>
+                    <view class="word know">已入选</view>
+                </view>
+                <view wx:if="{{item.state==0}}">
+                    <view class="iconfont icon-weitongguo-tuzhang1x bg entroll"></view>
+                    <view class="word entroll">报名中</view>
+                </view>
+                <view wx:if="{{item.state==3}}">
+                    <view class="iconfont icon-weitongguo-tuzhang1x bg pass"></view>
+                    <view class="word pass">已完成</view>
+                </view>
+                <view wx:if="{{item.state==2}}">
+                    <view class="iconfont icon-weitongguo-tuzhang1x bg no_pass"></view>
+                    <view class="word no_pass">未入选</view>
+                </view>
+            </view>
+            <view catchtap="uploadUrlLink" class="uploadContent" data-id="{{item.contractId}}" wx:if='{{item.state==1}}'>
+                上传内容链接
+            </view>
+            <view catchtap="cancelEntroll" class="cancelContent" data-contractId="{{item.contractId}}" data-shopName='{{item.activityName}}' wx:if='{{item.state==0}}'>
+                取消报名
+            </view>
+            <view class="flux" wx:if="{{ item.filter}}"></view>
+        </navigator>
+      
+        <van-overlay show="{{ show }}" round duration='0.1' class-name='overlay'>
+            <view class="dilogo_area">
+                <view class="input_area">
+                    <input type="text" placeholder="请输入内容链接" placeholder-style="font-size:28rpx;color:#ccc" value="{{linkUrl}}" maxlength="{{500}}" bindinput="inputeidt" data-value='linkUrl'></input>
+                </view>
+                <view class="prompt_word" wx:if="{{isBlank}}">输入内容不能为空</view>
+                <view class="btn_area">
+                    <button type="default" bindtap="cancelHandle">取消</button>
+                    <button type="primary" bindtap="sureHandle">确定</button>
+                </view>
+            </view>
+        </van-overlay>
+    </view>
+    <view class='no_data' wx:if="{{listDatas.length==0}}">
+        <image src="../../images/logo/nodata.png"></image>
+        <view class="txt">还没有商单哦</view>
+    </view>
+</view>
+<view class="skeleton" wx:else style='background:#fff;height:100vh'>
+    <van-skeleton title avatar row="5" />
+    <van-skeleton title avatar row="5" />
+    <van-skeleton title avatar row="5" />
+    <van-skeleton title avatar row="5" />
+</view>
+<van-dialog id="van-dialog" />
+
+  <van-popup show="{{ isPropt}}" round custom-style="height: 220rpx" lock-scroll='true'>
+            <view class="area">
+                <view class="content">请确定取消{{shopName}}的商单报名吗？</view>
+                <view class="btn">
+                    <view class="cancel" bindtap='cancelPlay'>取消</view>
+                    <view class="ok" bindtap='surePlay' >确认</view>
+                </view>
+            </view>
+        </van-popup>

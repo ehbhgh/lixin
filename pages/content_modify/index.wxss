@@ -1,0 +1,338 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.container {
+  width: 710rpx;
+  padding: 0 20rpx 100rpx 20rpx;
+}
+.container .content_require {
+  background-color: #fff;
+  padding-bottom: 30rpx;
+  margin-bottom: 20rpx;
+}
+.container .content_require .content_require_header {
+  width: 100%;
+  height: 50rpx;
+  font-weight: 600;
+  font-size: 40rpx;
+  padding: 20rpx 0 20rpx 0;
+  padding-left: 20rpx;
+  border-left: 10rpx solid #88D0FF;
+}
+.container .content_require .content_require_content {
+  padding-left: 30rpx;
+}
+.container .content_require .content_require_content view {
+  margin-top: 25rpx;
+}
+.container .content_require .content_require_content view > text:nth-of-type(1) {
+  display: inline-block;
+  width: 300rpx;
+  font-weight: 600;
+}
+.container .content_require .content_require_content view > text:nth-of-type(2) {
+  color: #aaa;
+}
+.container .content_require .content_require_content .detail_request_area {
+  padding-left: 0;
+}
+.container .content_require .content_require_content .detail_request_area > view:nth-of-type(1) {
+  font-weight: 600;
+}
+.container .content_require .content_require_content .detail_request_area > view:nth-of-type(2) {
+  padding: 15rpx;
+  width: 95%;
+  border: 2rpx solid #ccc;
+  line-height: 49rpx;
+  color: #aaa;
+  font-size: 29;
+}
+.container .content_require {
+  border-bottom: 2rpx solid #ccc;
+}
+.container .content_require .title_area {
+  margin-top: 30rpx;
+  padding-left: 20rpx;
+  margin-bottom: 30rpx;
+}
+.container .content_require .title_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .title_area input {
+  width: 95%;
+  height: 70rpx;
+  padding-left: 20rpx;
+  border: 2rpx solid #ccc;
+}
+.container .content_require .topic_area {
+  padding-left: 20rpx;
+  margin-bottom: 30rpx;
+}
+.container .content_require .topic_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .topic_area input {
+  width: 95%;
+  height: 70rpx;
+  border: 2rpx solid #ccc;
+  padding-left: 20rpx;
+}
+.container .content_require .text_upload_area {
+  padding-left: 20rpx;
+}
+.container .content_require .text_upload_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .text_upload_area textarea {
+  width: 95%;
+  border: 2rpx solid #ccc;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-right: 10rpx;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border-top-right-radius: 20rpx;
+}
+.container .content_require .pic_upload_area {
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+}
+.container .content_require .pic_upload_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .audio_upload_area {
+  padding-left: 20rpx;
+}
+.container .content_require .audio_upload_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.btn_area {
+  width: 100%;
+  height: 100rpx;
+  font-weight: 600;
+  line-height: 100rpx;
+  margin-top: 50rpx;
+  text-align: center;
+  background-color: #88D0FF;
+  color: #fff;
+  border-radius: 20rpx;
+  z-index: 300rpx;
+}
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.container {
+  width: 710rpx;
+  padding: 0 20rpx 100rpx 20rpx;
+}
+.container .content_require {
+  background-color: #fff;
+  padding-bottom: 30rpx;
+  margin-bottom: 20rpx;
+}
+.container .content_require .content_require_header {
+  width: 100%;
+  height: 50rpx;
+  font-weight: 600;
+  font-size: 40rpx;
+  padding: 20rpx 0 20rpx 0;
+  padding-left: 20rpx;
+  border-left: 10rpx solid #88D0FF;
+}
+.container .content_require .content_require_content {
+  padding-left: 30rpx;
+}
+.container .content_require .content_require_content view {
+  margin-top: 25rpx;
+}
+.container .content_require .content_require_content view > text:nth-of-type(1) {
+  display: inline-block;
+  width: 300rpx;
+  font-weight: 600;
+}
+.container .content_require .content_require_content view > text:nth-of-type(2) {
+  color: #aaa;
+}
+.container .content_require .content_require_content .detail_request_area {
+  padding-left: 0;
+}
+.container .content_require .content_require_content .detail_request_area > view:nth-of-type(1) {
+  font-weight: 600;
+}
+.container .content_require .content_require_content .detail_request_area > view:nth-of-type(2) {
+  padding: 15rpx;
+  width: 95%;
+  border: 2rpx solid #ccc;
+  line-height: 49rpx;
+  color: #aaa;
+  font-size: 29;
+}
+.container .content_require {
+  border-bottom: 2rpx solid #ccc;
+}
+.container .content_require .title_area {
+  margin-top: 30rpx;
+  padding-left: 20rpx;
+  margin-bottom: 30rpx;
+}
+.container .content_require .title_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .title_area input {
+  width: 95%;
+  height: 70rpx;
+  padding-left: 20rpx;
+  border: 2rpx solid #ccc;
+}
+.container .content_require .topic_area {
+  padding-left: 20rpx;
+  margin-bottom: 30rpx;
+}
+.container .content_require .topic_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .topic_area input {
+  width: 95%;
+  height: 70rpx;
+  border: 2rpx solid #ccc;
+  padding-left: 20rpx;
+}
+.container .content_require .text_upload_area {
+  padding-left: 20rpx;
+}
+.container .content_require .text_upload_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .text_upload_area textarea {
+  width: 95%;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border: 2rpx solid #ccc;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  border-top-right-radius: 20rpx;
+  padding-bottom: 10rpx;
+  padding-right: 10rpx;
+}
+.container .content_require .pic_upload_area {
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+}
+.container .content_require .pic_upload_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.container .content_require .audio_upload_area {
+  padding-left: 20rpx;
+}
+.container .content_require .audio_upload_area view {
+  margin-bottom: 15rpx;
+  font-weight: 600;
+}
+.btn_area {
+  width: 100%;
+  height: 100rpx;
+  font-weight: 600;
+  line-height: 100rpx;
+  margin-top: 50rpx;
+  text-align: center;
+  background-color: #88D0FF;
+  color: #fff;
+  border-radius: 20rpx;
+  z-index: 300rpx;
+}
+/* pages/putmes/putmes.wxss */
+.optClass {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  flex-wrap: wrap;
+}
+.optClass .optName {
+  width: 180rpx;
+  font-weight: 600;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.optClass .optName text,
+.optClass .mesTit text {
+  color: #ce0a0a;
+}
+.optClass .optContent {
+  flex: 1;
+  text-align: right;
+  color: #666;
+  font-size: 32rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.optClass .uploadimgbox {
+  flex: 0 0 33.333%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+}
+.optClass .uploadimgbox .progress {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 208rpx;
+  z-index: 99;
+}
+.optClass .uploadimgbox .delbtn {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  z-index: 98;
+}
+.optClass .uploadimg,
+.optClass .uploadbtn {
+  display: block;
+  width: 100%;
+  height: 208rpx;
+}
+.subBtnBox .subBtn {
+  width: 80%;
+  display: block;
+  margin: 80rpx auto;
+  background-color: #ce0a0a;
+  color: #fff;
+  font-size: 32rpx;
+}
+.subBtnBox .subBtn.button-hover {
+  background-color: #bb0909;
+}
+.vedio_area_uploader {
+  margin-top: 20rpx;
+}

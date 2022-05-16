@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/homes/index",
+    "pages/mine/index",
+    "pages/common_add/index",
+    "pages/details/index",
+    "pages/category_add/index",
+    "pages/login/index",
+    "pages/my_name/index",
+    "pages/successful_regist/index",
+    "pages/participant_list/index",
+    "pages/performancedetail/index",
+    "pages/content_modify/index",
+    "pages/content_upload/index",
+    "pages/citys/index",
+    "pages/enrolls/index",
+    "pages/name_message/index",
+    "pages/weixinLink/index",
+    "pages/myContent/index",
+    "pages/phoneLogin/index",
+    "pages/phoneLoginSecond/index",
+    "pages/test/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#88D0FF",
+    "navigationBarTitleText": "力心传媒",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#88D0FF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/icon/new_home.png",
+        "iconPath": "images/icon/old_home.png",
+        "pagePath": "pages/homes/index",
+        "text": "商单广场"
+      },
+      {
+        "selectedIconPath": "images/icon/new_mine.png",
+        "iconPath": "images/icon/old_mine.png",
+        "pagePath": "pages/myContent/index",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

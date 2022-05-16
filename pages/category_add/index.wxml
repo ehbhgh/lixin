@@ -1,0 +1,185 @@
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <view class="sumbit_item" wx:if="{{douyin}}">
+            <view class="title"> <text class='color4'></text>抖音</view>
+            <navigator url='/pages/name_message/index?name=1'>
+                    <view class="bgImage">
+                <image class="" src="../../images/logo/wen.png" mode="widthFix" lazy-load="false" ></image>
+                <text>名片信息在哪？</text>
+            </view>
+            </navigator>
+            <view class="form">
+                <van-cell-group>
+                    <input type="text" value="3" hidden  name='douyin'/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入主页链接" border="{{ true}}" label="主页链接:" title-width='120rpx' name="douyin_url"  disabled="{{isDisable}}" data-text='url'    model:value="{{ douyin_url }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field  class='input' required placeholder="请输入主页ID" border="{{ true}}" label="主页ID:" title-width='120rpx' name="douyin_uid"  disabled="{{isDisable}}" data-text='id'     model:value="{{ douyin_uid }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入昵称" border="{{ true}}" label="昵称:" title-width='120rpx' name="douyin_nickname"  disabled="{{isDisable}}" data-text='nickname'     model:value="{{douyin_nickname}}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' type="number" required placeholder="请输入刊例报价" border="{{ true}}" label="刊例报价:" title-width='120rpx' name="douyin_price"  disabled="{{isDisable}}" data-text='price'     model:value="{{ douyin_price }}"/>
+                </van-cell-group>
+            </view>
+        </view>
+        <view class="sumbit_item" wx:if="{{weibo}}">
+            <view class="title"><text class='color2'></text>微博</view>
+        <navigator url='/pages/name_message/index?name=2'>
+                    <view class="bgImage">
+                <image class="" src="../../images/logo/wen.png" mode="widthFix" lazy-load="false" ></image>
+                <text>名片信息在哪？</text>
+            </view>
+            </navigator>
+            <view class="form">
+                <van-cell-group>
+                    <input type="text" value="4" hidden name='weibo'/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入主页链接" border="{{ true}}" label="主页链接:" title-width='120rpx' name="weibo_url"  disabled="{{isDisable}}" data-text='url' model:value="{{ weibo_url }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field  class='input' required placeholder="请输入主页ID" border="{{ true}}" label="主页ID:" title-width='120rpx' name="weibo_uid"  disabled="{{isDisable}}" data-text='id' model:value="{{ weibo_uid }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入昵称" border="{{ true}}" label="昵称:" title-width='120rpx' name="weibo_nickname"  disabled="{{isDisable}}" data-text='nickname' model:value="{{ weibo_nickname }}" />
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' type="number" required placeholder="请输入刊例报价" 
+                    border="{{ true}}" label="刊例报价:" title-width='120rpx' name="weibo_price"  
+                    disabled="{{isDisable}}" data-text='price' model:value="{{ weibo_price }}"/>
+                </van-cell-group>
+            </view>
+        </view>
+        <view class="sumbit_item" wx:if="{{redBook}}">
+            <view class="title"><text class='color1'></text>小红书</view>
+               <navigator url='/pages/name_message/index?name=3'>
+                    <view class="bgImage">
+                <image class="" src="../../images/logo/wen.png" mode="widthFix" lazy-load="false" ></image>
+                <text>名片信息在哪？</text>
+            </view>
+            </navigator>
+            <view class="form">
+                <van-cell-group>
+                    <input type="text" value="2" hidden name='little_red_book'/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入主页链接" border="{{ true}}" 
+                    label="主页链接:" title-width='120rpx' name="little_red_book_url"  disabled="{{isDisable}}" data-text='url' model:value="{{little_red_book_url }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field  class='input' required placeholder="请输入小红书号" border="{{ true}}" 
+                    label="小红书号:" title-width='120rpx' name="little_red_book_uid"  disabled="{{isDisable}}" data-text='id' model:value="{{little_red_book_uid }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入昵称" border="{{ true}}" 
+                    label="昵称:" title-width='120rpx' name="little_red_book_nickname"  disabled="{{isDisable}}" data-text='nickname' model:value="{{little_red_book_nickname }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input'  type="number" required placeholder="请输入刊例报价" border="{{ true}}" label="刊例报价:" title-width='120rpx' 
+                    name="little_red_book_price"  disabled="{{isDisable}}" data-text='price' model:value="{{little_red_book_price }}" />
+                </van-cell-group>
+            </view>
+        </view>
+        <view class="sumbit_item" wx:if="{{dianping}}">
+            <view class="title "><text class='color3'></text>大众点评</view>
+           <navigator url='/pages/name_message/index?name=4'>
+                    <view class="bgImage">
+                <image class="" src="../../images/logo/wen.png" mode="widthFix" lazy-load="false" ></image>
+                <text>名片信息在哪？</text>
+            </view>
+            </navigator>
+            <view class="form">
+                <van-cell-group>
+                    <input type="text" value="1" hidden name='dianping'/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入主页链接" border="{{ true}}" label="主页链接:" 
+                    title-width='120rpx' name="dianping_url"  disabled="{{isDisable}}" data-text='url' model:value="{{dianping_url}}" bind:input='urlInput'/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field  class='input' required placeholder="请输入主页ID" border="{{ true}}" label="主页ID:" 
+                   title-width='120rpx' name="dianping_uid"  disabled="{{isDisable}}" data-text='id' model:value="{{dianping_uid }}"   bind:focus='propt'/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入昵称" border="{{ true}}" 
+                    label="昵称:" title-width='120rpx' name="dianping_nickname"  disabled="{{isDisable}}" data-text='nickname' model:value="{{dianping_nickname }}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' type="number" required placeholder="请输入刊例报价" 
+                    border="{{ true}}" label="刊例报价:" title-width='120rpx' name="dianping_price" 
+                     disabled="{{isDisable}}" data-text='price' model:value="{{dianping_price}}"/>
+                </van-cell-group>
+            </view>
+        </view>
+        <view class="sumbit_item" wx:if="{{blibli}}">
+            <view class="title"><text class='color5'></text>哔哩哔哩</view>
+             <navigator url='/pages/name_message/index?name=5'>
+                    <view class="bgImage">
+                <image class="" src="../../images/logo/wen.png" mode="widthFix" lazy-load="false" ></image>
+                <text>名片信息在哪？</text>
+            </view>
+            </navigator>
+            <view class="form">
+                <van-cell-group>
+                    <input type="text" value="6" hidden name='blibli' />
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入主页链接" border="{{ true}}" label="主页链接:" 
+                    title-width='120rpx' name="blibli_url"  disabled="{{isDisable}}" data-text='url' model:value="{{blibli_url}}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field  class='input' required placeholder="请输入主页ID" border="{{ true}}" label="主页ID:" 
+                    title-width='120rpx' name="blibli_uid"  disabled="{{isDisable}}" data-text='id' model:value="{{blibli_uid}}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入昵称" border="{{ true}}" label="昵称:" 
+                    title-width='120rpx' name="blibli_nickname"  disabled="{{isDisable}}" data-text='nickname' model:value="{{blibli_nickname}}" />
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' type="number" required placeholder="请输入刊例报价" border="{{ true}}" 
+                    label="刊例报价:" title-width='120rpx' name="blibli_price"  disabled="{{isDisable}}" data-text='price' model:value="{{blibli_price}}"/>
+                </van-cell-group>
+            </view>
+        </view>
+
+          <view class="sumbit_item" wx:if="{{kuaishou}}">
+            <view class="title "><text class='color6'></text>快手</view>
+           <navigator url='/pages/name_message/index?name=6'>
+                    <view class="bgImage">
+                <image class="" src="../../images/logo/wen.png" mode="widthFix" lazy-load="false" ></image>
+                <text>名片信息在哪？</text>
+            </view>
+            </navigator>
+            <view class="form">
+                <van-cell-group>
+                    <input type="text" value="5" hidden name='kuaishou' />
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入主页链接" border="{{ true}}" label="主页链接:" 
+                    title-width='120rpx' name="kuaishou_url"  disabled="{{isDisable}}" data-text='url' model:value="{{kuaishou_url}}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field  class='input' required placeholder="请输入主页ID" border="{{ true}}" 
+                    label="主页ID:" title-width='120rpx' name="kuaishou_uid"  disabled="{{isDisable}}" data-text='id' model:value="{{kuaishou_uid}}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' required placeholder="请输入昵称" border="{{ true}}" label="昵称:"
+                     title-width='120rpx' name="kuaishou_nickname"  disabled="{{isDisable}}" data-text='nickname' model:value="{{kuaishou_nickname}}"/>
+                </van-cell-group>
+                <van-cell-group>
+                    <van-field class='input' type="number" required placeholder="请输入刊例报价" 
+                    border="{{ true}}" label="刊例报价:" title-width='120rpx' name="kuaishou_price"  disabled="{{isDisable}}" data-text='price' model:value="{{kuaishou_price}}"/>
+                </van-cell-group>
+            </view>
+        </view>
+        <view class="btn_area">
+            <button formType="submit" class="btn" disabled="{{addBtnDisable}}">添加</button>
+        </view>
+    </form>
+</view>
+
+<van-toast id="van-toast" />

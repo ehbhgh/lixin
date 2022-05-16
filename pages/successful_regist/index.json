@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-popup": "../../../plugin_vant/popup/index"
+  },
+  "navigationBarTitleText": "报名成功"
+}

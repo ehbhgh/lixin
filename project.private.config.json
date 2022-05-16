@@ -1,0 +1,293 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": 0,
+                    "name": "登录",
+                    "pathName": "pages/login/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 1,
+                    "name": "商单广场",
+                    "pathName": "pages/home/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 2,
+                    "name": "我的",
+                    "pathName": "pages/mine/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 3,
+                    "name": "开机屏",
+                    "pathName": "pages/startup/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 4,
+                    "name": "商单详情",
+                    "pathName": "pages/detail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 5,
+                    "name": "添加表单",
+                    "pathName": "pages/add/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "异常页面",
+                    "pathName": "pages/abnormal/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 10,
+                    "name": "尚未完善",
+                    "pathName": "pages/noorder_received/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "名片失效",
+                    "pathName": "pages/invalid/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 9,
+                    "name": "我的名片",
+                    "pathName": "pages/my_name/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 10,
+                    "name": "修改",
+                    "pathName": "pages/modify/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 11,
+                    "name": "报名",
+                    "pathName": "pages/enroll/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "审核中",
+                    "pathName": "pages/successful_regist/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/participant_list/index",
+                    "pathName": "pages/participant_list/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "履约详情",
+                    "pathName": "pages/performancedetail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 15,
+                    "name": "商单详情",
+                    "pathName": "pages/modify/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "内容修改",
+                    "pathName": "pages/content_modify/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "上传内容",
+                    "pathName": "pages/content_upload/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "订阅消息",
+                    "pathName": "pages/subscribe_message/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 19,
+                    "name": "报名成功过",
+                    "pathName": "pages/successful_regist/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "首页",
+                    "pathName": "pages/homes/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "初次新增",
+                    "pathName": "pages/common_add/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "分类新增",
+                    "pathName": "pages/category_add/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/details/index",
+                    "pathName": "pages/details/index",
+                    "query": "scene=aId%3D2196",
+                    "scene": 1047
+                },
+                {
+                    "id": -1,
+                    "name": "城市",
+                    "pathName": "pages/citys/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "报名页面",
+                    "pathName": "pages/enrolls/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "履约详情",
+                    "pathName": "pages/performancedetail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/participant_list/index",
+                    "pathName": "pages/participant_list/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/category_add/index",
+                    "pathName": "pages/category_add/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/successful_regist/index",
+                    "pathName": "pages/successful_regist/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/noorder_received/index",
+                    "pathName": "pages/noorder_received/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/noorder_received/index",
+                    "pathName": "pages/noorder_received/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/index",
+                    "pathName": "pages/login/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/enrolls/index",
+                    "pathName": "pages/enrolls/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/abnormal/index",
+                    "pathName": "pages/abnormal/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/name_message/index",
+                    "pathName": "pages/name_message/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/weixinLink/index",
+                    "pathName": "pages/weixinLink/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/test/index",
+                    "pathName": "pages/test/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/myContent/index",
+                    "pathName": "pages/myContent/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/phoneLogin/index",
+                    "pathName": "pages/phoneLogin/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/phoneLoginSecond/index",
+                    "pathName": "pages/phoneLoginSecond/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/test/index",
+                    "pathName": "pages/test/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

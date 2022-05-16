@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-dropdown-menu": "../../../plugin_vant/dropdown-menu/index",
+    "van-dropdown-item": "../../../plugin_vant/dropdown-item/index",
+    "van-dialog": "../../../plugin_vant/dialog/index",
+    "van-popup": "../../../plugin_vant/popup/index",
+    "van-overlay":"../../../plugin_vant/overlay/index",
+    "van-skeleton": "../../../plugin_vant/skeleton/index"
+  },
+  "navigationBarTitleText": "我参与的商单"
+}

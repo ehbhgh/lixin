@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-toast": "../../../plugin_vant/toast/index"
+  },
+  "navigationBarTitleText": "授权用户信息"
+}

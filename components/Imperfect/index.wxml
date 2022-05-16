@@ -1,0 +1,4 @@
+<view class="container">
+    <view class="container_item">尚未完善个人名片信息</view>
+    <view class="container_perfect" bindtap="perfectHandle">去完善</view>
+</view>

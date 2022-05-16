@@ -1,0 +1,77 @@
+<wxs src="../../wxs/setContent.wxs" module="tools"></wxs>
+<view class="container" wx:if='{{isForbiden}}'>
+    <view class="no_container" wx:if="{{commonData.alipay==null&&isShow}}">没有名片</view>
+    <block wx:else>
+        <view class="pay_message">
+            <view class="title">收款及地址信息</view>
+            <view class="message_area" wx:if="{{commonData.alipay!=null}}">
+                <view class="message_item">
+                    <view>
+                        <text>真实姓名:</text>
+                        <text>{{ commonData.realName}}</text>
+                    </view>
+                   
+                        <view hidden="{{!isflag}}">
+                            <text>手机号:</text>
+                            <text>{{commonData.mobile}}</text>
+                        </view>
+                        <view hidden="{{!isflag}}">
+                            <text>支付宝:</text>
+                            <text>{{commonData.alipay}}</text>
+                        </view>
+                        <view hidden="{{!isflag}}">
+                            <text>微信号:</text>
+                            <text>{{commonData.wx}}</text>
+                        </view>
+                  
+                </view>
+                <view class='address'>
+                    <view>寄送地址:</view>
+                    <view class='address_item'>{{commonData.address}}</view>
+                </view>
+            </view>
+            <view class="no_name_message" wx:if="{{commonData.alipay==null}}">暂无收款及地址信息</view>
+        </view>
+        <view class="name_message">
+            <view class="title">名片信息</view>
+            <view wx:for="{{cards}}" wx:key="item">
+                <view class="has_name" wx:if="{{item.isSet==1}}">
+                    <view class="deletebtn" bindtap='deleteName' data-type='{{item.type}}'>删除</view>
+                    <view class="img_area">
+                        <image src="{{item.picUrl}}" mode="widthFix" class='{{item.type==6?"douyin":""}}'></image>
+                    </view>
+                    <view class="title_area">
+                        <view class="fans_num">
+                            <text>ID:</text>
+                            <text>{{item.uid}}</text>
+                        </view>
+                        <view class="title_name">
+                            <text class="nickname">昵称：</text>
+                            <text>{{item.nickname}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="no_name_message" wx:if="{{isShow}}">暂无名片</view>
+        </view>
+    </block>
+    <view class="bottom_area">
+        <view class="btn_area" bind:tap="modifyName">修改个人信息或添加名片</view>
+    </view>
+</view>
+<view class="skeleton" wx:else style='background:#fff;height:100vh'>
+    <van-skeleton title avatar row="5" />
+    <van-skeleton title avatar row="5" />
+    <van-skeleton title avatar row="5" />
+    <van-skeleton title avatar row="5" />
+</view>
+<van-popup show="{{ isPropt}}" round custom-style="height: 250rpx" lock-scroll='true'>
+    <view class="area">
+        <view class="content">请确定是否删除{{tools.setContent(type)}}名片？</view>
+        <view class="btn">
+            <view class="cancel" bindtap='cancelPlay'>取消</view>
+            <view class="ok" bindtap='surePlay'>确认</view>
+        </view>
+    </view>
+</van-popup>
+<van-dialog id="van-dialog" />

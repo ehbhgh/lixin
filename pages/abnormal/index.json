@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-dialog": "../../../plugin_vant/dialog/index"
+  },
+  "navigationBarTitleText": "",
+  "disableScroll": true
+}

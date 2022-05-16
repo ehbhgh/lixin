@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-panel": "../../../plugin_vant/panel/index",
+    "van-checkbox": "../../../plugin_vant/checkbox/index",
+    "van-checkbox-group": "../../../plugin_vant/checkbox-group/index",
+    "van-icon": "../../../plugin_vant/icon/index",
+    "van-dialog": "../../../plugin_vant/dialog/index",
+    "van-toast": "../../../plugin_vant/toast/index",
+    "van-field": "../../../plugin_vant/field/index",
+    "van-action-sheet": "../../../plugin_vant/action-sheet/index",
+    "van-popup": "../../../plugin_vant/popup/index"
+  },
+  "navigationBarTitleText": "报名"
+}

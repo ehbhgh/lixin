@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-toast": "../../../plugin_vant/toast/index",
+    "van-dialog": "../../../plugin_vant/dialog/index"
+  },
+  "navigationBarTitleText": "手机号一键登录"
+}

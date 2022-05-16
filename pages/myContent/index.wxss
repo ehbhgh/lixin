@@ -1,0 +1,111 @@
+.container .box_container {
+  background-color: #88D0FF;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 20rpx 200rpx 20rpx;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.container .box_container .left_name {
+  display: flex;
+  width: 500rpx;
+  align-items: center;
+  margin-left: 20rpx;
+  height: 300rpx;
+}
+.container .box_container .left_name image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.container .box_container .left_name .box_area {
+  margin-left: 25rpx;
+}
+.container .box_container .left_name .box_item {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10rpx;
+  padding-right: 20rpx;
+}
+.container .box_container .left_name .bov_title {
+  font-size: 30rpx;
+  color: #fff;
+}
+.container .box_container .right_name {
+  width: 140rpx;
+  height: 60rpx;
+  background-color: #f2f2f2;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 18rpx;
+}
+.contact_area {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 20rpx auto;
+  height: 430rpx;
+  position: absolute;
+}
+.contact_area .border_style {
+  border-bottom: 4rpx solid #f2f2f2;
+  height: 200rpx !important;
+}
+.contact_area .contact_area_item {
+  display: flex;
+  justify-content: space-between;
+  height: 110rpx;
+  align-items: center;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.contact_area .contact_area_item .contact_area_image {
+  display: flex;
+  align-items: center;
+}
+.contact_area .contact_area_item .contact_area_image image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.contact_area .contact_area_item .contact_area_image view {
+  margin-left: 20rpx;
+}
+.contact_area .contact_area_item .contact_area_image .text {
+  font-size: 33rpx;
+}
+.area {
+  width: 600rpx;
+  height: 150rpx;
+  margin: 100rpx auto;
+}
+.area .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.area .btn button {
+  color: #88D0FF;
+}
+.area .content {
+  width: 92%;
+  margin: 20rpx auto;
+  line-height: 45rpx;
+  text-align: left;
+}
+.bt {
+  width: 94%;
+  height: 480rpx;
+  background-color: #fff;
+  position: absolute;
+  box-shadow: 0 0 2rpx 2rpx rgba(177, 174, 174, 0.1);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 290rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+page {
+  background-color: #f2f2f2;
+}

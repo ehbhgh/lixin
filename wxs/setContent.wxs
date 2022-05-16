@@ -1,0 +1,26 @@
+function setContent(type) {
+    if (type == 1) {
+        return '点评'
+    }
+    else if (type == 2) {
+        return '小红书'
+    }
+    else if (type == 3) {
+        return '抖音'
+    }
+    else if (type == 4) {
+        return '微博'
+    }
+    else if (type == 5) {
+        return '快手'
+    }
+    else if (type == 6) {
+        return 'BliBli'
+    } else {
+        return " "
+    }
+}
+
+module.exports = {
+    setContent: setContent
+}

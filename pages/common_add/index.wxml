@@ -1,0 +1,52 @@
+<form bindsubmit="formSubmit">
+    <van-cell-group>
+        <van-field model:value="{{ realName }}" class='input' required placeholder="请输入真实姓名" border="{{ true}}" label="真实姓名:" title-width='120rpx' name="realName" bind:focus='inpuFocus' disabled="{{isDisable}}" data-text='realName' />
+    </van-cell-group>
+    <view wx:if='{{isShow}}'>
+        <van-cell-group>
+            <van-field type="number" model:value="{{ mobile}}" class='input' required placeholder="请输入手机号" border="{{ true}}" label="手机号:" title-width='120rpx' name="mobile" bind:focus='inpuFocus' disabled="{{isDisable}}" data-text='mobile' />
+        </van-cell-group>
+        <van-cell-group>
+            <van-field model:value="{{alipay }}" class='input' required placeholder="请输入支付宝号" border="{{ true}}" label="支付宝号:" title-width='120rpx' name="alipay" bind:focus='inpuFocus' disabled="{{isDisable}}" data-text='alipay' />
+        </van-cell-group>
+        <van-cell-group>
+            <van-field model:value="{{ wx }}" class='input' required placeholder="请输入微信号" border="{{ true}}" label="微信号:" title-width='120rpx' name="wx" bind:focus='inpuFocus' disabled="{{isDisable}}" data-text='wx' />
+        </van-cell-group>
+    </view>
+    <van-cell-group>
+        <van-field model:value="{{ address }}" class='input' required placeholder="请输入寄送地址" border="{{ true}}" label="寄送地址:" title-width='120rpx' name="address" bind:focus='inpuFocus' disabled="{{isDisable}}" data-text='address' />
+    </van-cell-group>
+    <view class="btn_area">
+        <button formType="submit" disabled="{{isAddBtn}}">保存并进入下一步</button>
+    </view>
+</form>
+<van-toast id="van-toast" />
+<van-overlay show="{{  sureShow }}">
+    <view class="wrapper">
+        <view class="tag_area">
+            <view class="tag_title">请选择名片平台(可多选)</view>
+            <view class="tag_content">
+                <view class='tag_item {{item.isSet==1?"isable":""}}' data-Id='{{item.type}}' wx:for="{{ cards}}" wx:key='item' bind:tap='nameSelect'>
+                    <view class="bg" wx:if='{{item.isSet==1}}'>
+                        <view class="word">已绑定</view>
+                    </view>
+                    <view>
+                        <view class="click_area">
+                            <view>
+                                <image src='{{item.picUrl}}' mode="widthFix"></image>
+                            </view>
+                            <view wx:if='{{item.isSet!=1}}'>{{item.title}}</view>
+                            <view>
+                                <image wx:if='{{item.showTag}}' src='https://i.loli.net/2021/05/26/9aOgqei2GpxzUmF.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="btn_area">
+                <view class='cancel' bind:tap='cancel'>返回上一页</view>
+                <view class='btn' bind:tap='nextSumbit'>下一步</view>
+            </view>
+        </view>
+    </view>
+</van-overlay>

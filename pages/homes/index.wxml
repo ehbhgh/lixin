@@ -1,0 +1,104 @@
+<view class="container" >
+    <view style=' position: fixed; top: 0px;left:0px; width:100%;height:{{statusBarHeight+navBarHeight}}px;z-index:999'>
+        <view style="width:100%;height:{{statusBarHeight}}px;background-color:#88D0FF" class='statusBarHeight'></view>
+        <view class="nav_title_area" style="width:100%;height:{{navBarHeight}}px;background-color:#88D0FF">
+            <view class="select_option">
+                <view catchtap="bindcityPickerChange" >
+                    <text>{{citySelect.cityName}}</text>
+                    <van-icon name="arrow-down" size="14px" />
+                </view>
+            </view>
+            <view class="nav_title">商单广场</view>
+        </view>
+    </view>
+    <view style="width:100%;height:{{statusBarHeight+navBarHeight}}px"></view>
+        <view class="header_style">
+            <view class="header_style_background_first"></view>
+            <view class="header_style_background"></view>
+            <view class="swiper_content">
+                <swiper autoplay interval="5000" circular indicator-dots indicator-color="rgba(44,44,44,.3)" indicator-active-color="#88D0FF" style='ovewflow:hidden;border-radius:16rpx;'>
+                <view wx:for="{{bannerResults}}" wx:key="item" bindtap='wxlinkPlay' data-link='{{item.link}}'>
+                        <swiper-item class="" item-id="">
+                        <image class="" src="{{item.url}}" mode="widthFix"></image>
+                    </swiper-item>
+                </view> 
+                </swiper>
+            </view>
+        </view>
+        <view class="tag_title">
+            <scroll-view scroll-x="true"  style=" white-space: nowrap;" >
+                <block wx:for="{{newArr}}" wx:key="item">               
+                        <view class="scroll_item_content {{item.platformId==targetIndex ?'diff_style':''}}  " catch:tap='tagHandle' data-id="{{item.platformId}}" style="width:{{item.innerWidth}}px; {{targetIndex==0&&item.platformId==-1?'background-color:#88D0FF':''}} ">
+                            <text style=" {{targetIndex==0&&item.platformId==-1?'color:#fff':''}}">{{item.name}}</text>
+                        </view>
+                </block>
+            </scroll-view>
+        </view>
+        <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">点击获取号码</button> -->
+        <view class="box_contain" wx:for="{{shopDatas}}" wx:key="item">
+            <navigator url='/pages/details/index?aId={{item.aId}}'>
+                <view wx:if="{{item.permissionForTheUnsigned==0}}" class="box_item_shop">
+                    限签约
+                </view>
+                <view class="box_title">
+                    <view class="img_area">
+                        <image class="dp" src="{{item.logoUrl}}" wx:if='{{item.platformId==1}}' mode='widthFix'></image>
+                         <image class="hs" src="{{item.logoUrl}}" wx:if='{{item.platformId==2}}' mode='widthFix'></image>
+                          <image class="dy" src="{{item.logoUrl}}" wx:if='{{item.platformId==3}}' mode='widthFix'></image>
+                           <image class="wb" src="{{item.logoUrl}}" wx:if='{{item.platformId==4}}' mode='widthFix'></image>
+                            <image class="ks" src="{{item.logoUrl}}" wx:if='{{item.platformId==5}}' mode='widthFix'></image>
+                             <image class="bz" src="{{item.logoUrl}}" wx:if='{{item.platformId==6}}' mode='widthFix'></image>
+                    </view>
+                    <text>{{item.activityName}}</text>
+                </view>
+                 <view class="tag_text">
+                    <view  wx:if='{{item.typeOfRewards=="无费置换"}}' class='no_sal'><text class='iconfont icon-liwu' decode="true" >&nbsp;{{item.typeOfRewards}}</text></view>
+                    <view wx:if='{{item.typeOfRewards=="有费投稿"}}' class="have_sal"><text class='iconfont icon-feiyong' decode="true" >&nbsp;{{item.typeOfRewards}}</text></view>
+                </view>
+                <view class="box_place">
+                   <van-icon name="location-o" />
+                   <view>可履约城市:</view>
+                    <view>{{item.cityString}}</view>
+                </view>
+                <view class="box_sal">
+                  <van-icon name="friends-o" />
+                  <view>粉丝要求:</view>
+                    <view>{{item.fansMin}}~{{item.fansMax}}</view>
+                </view>
+                <view class="hr"></view>
+               
+            </navigator>
+        </view>
+
+        <view class='no_data' wx:if="{{shopDatas.length==0}}">
+            <image src="../../images/logo/nodata.png"></image>
+            <view class="txt">还没有商单哦</view>
+        </view>
+        <van-loading size="24px" type='spinner' wx:if='{{ isRefreshing}}'>加载中...</van-loading>
+        <view class="finish" wx:if='{{finished}}'>加载完毕</view>
+    <!-- </pull-refresh-view> -->
+      <view class='goTop' wx:if='{{floorstatus}}' catchtap="goTop">
+        <image src="../../images/mine/top.png"></image>
+        <view>回顶部</view>
+   </view>
+   
+   <button class="wx_area" catchtap='proptPlay'>
+    <view class="wx iconfont icon-zhongdianrenyuanguanli"> </view>
+       <view class="title "><text class='iconfont icon-shouye icon'></text>入群</view>
+  </button>
+</view>
+
+<van-dialog id="van-dialog" />
+
+    <van-popup show="{{  isPropt}}" round closeable custom-style="height: 350rpx" bind:close="closed">
+        <view class="area">
+            <view class="content">进入客服窗口，发送数字1，获取通告管理员微信二维码，加好友后邀请进入通告群.</view>
+            <view class="btn">
+                <button open-type="contact"  show-message-card send-message-title="获取力心商单社群二维码"
+                 send-message-img='../../images/mine/login.png'
+                 send-message-path="/pages/homes/index">
+                    前往加群
+                </button>
+            </view>
+        </view>
+    </van-popup>

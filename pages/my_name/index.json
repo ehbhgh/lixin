@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-skeleton": "../../../plugin_vant/skeleton/index",
+    "van-dialog": "../../../plugin_vant/dialog/index",
+    "van-popup": "../../../plugin_vant/popup/index"
+  },
+  "navigationBarTitleText": "我的名片"
+ 
+}

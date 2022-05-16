@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-dialog": "../../../plugin_vant/dialog/index",
+    "van-skeleton": "../../../plugin_vant/skeleton/index",
+    "van-popup": "../../../plugin_vant/popup/index",
+    "van-share-sheet": "../../../plugin_vant/share-sheet/index",
+    "van-action-sheet": "../../../plugin_vant/action-sheet/index"
+   
+  },
+ "navigationStyle":"custom"}

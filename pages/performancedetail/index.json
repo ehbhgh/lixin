@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-dialog": "../../../plugin_vant/dialog/index",
+    "van-popup": "../../../plugin_vant/popup/index"
+
+  },
+  "navigationStyle":"custom"
+}

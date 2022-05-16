@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-dialog": "../../../plugin_vant/dialog/index"
+  },
+  "navigationBarTitleText": "选择城市"
+}

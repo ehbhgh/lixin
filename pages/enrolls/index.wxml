@@ -1,0 +1,141 @@
+<view class="container">
+    <van-dialog message="{{ismessage}}" title="提示" show="{{ isshow }}" bind:confirm="getUserInfos" confirmButtonText="确定" custom-style="font-size:26rpx"></van-dialog>
+    <view class="container_item box_style">
+        <view class="container_header">名片信息</view>
+        <view class="container_content">
+            <view class="container_content_item">
+                <text class="iconfont icon-nicheng"></text>
+                <text decode="{{true}}">&nbsp;昵称:</text>
+                <text decode="{{true}}">{{inintData.nickname}}</text>
+            </view>
+            <view class="container_content_item">
+                <text class="iconfont icon-Id"></text>
+                <text decode="{{true}}">&nbsp;ID:</text>
+                <text decode="{{true}}">{{inintData.uid}}</text>
+            </view>
+            <view class="container_content_item" wx:if="{{isflag}}">
+                <text class="iconfont icon-shoujihao1"></text>
+                <text decode="{{true}}">&nbsp;手机号:</text>
+                <text decode="{{true}}">{{inintData.mobile}}</text>
+            </view>
+            <view class="container_content_item" wx:if="{{isflag}}">
+                <text class="iconfont icon-weixin"></text>
+                <text decode="{{true}}">&nbsp;微信号:</text>
+                <text decode="{{true}}">{{inintData.wx}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="container_item">
+        <view class="container_header">报名信息</view>
+        <view class="city_content">
+            <view class="city city_border">
+                <view class="city_item">
+                    <view>
+                        <text style='color:red'>*</text>
+                        履约城市:</view>
+                    <view class="showtime">
+                        <picker range="{{citySelect}}" value="{{citySelectIndex}}" bindchange="bindcityPickerChange" class="pickname">
+                            <text wx:if="{{selectNull}}">{{citySelect[citySelectIndex]}}</text>
+                            <text wx:else style='color:#ccc'>请选择执行城市</text>
+                        </picker>
+                        <!-- <van-icon name="arrow" /> -->
+                    </view>
+                </view>
+            </view>
+            <view class="city">
+                <view class="city_item">
+                    <view><text style='color:red'>*</text>
+                    执行时间:</view>
+                    <view class="showtime">
+                        <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}" class="pickname">
+                            <text wx:if="{{showerTime}}" style='color:#ccc'>请选择执行时间</text>
+                            <text wx:else>{{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}</text>
+                        </picker>
+                    </view>
+                </view>
+            </view>
+            <view class="city_prompt">
+                <!-- <text>执行时间：</text> -->
+                <text>{{inintData.availableTime}}</text>
+            </view>
+            <view class="city">
+                <view class="city_item">
+                    <view><text style='color:red'>*</text>
+                    粉丝数量:</view>
+                    <view class="showtime">
+                        <input type="number" value="{{ fansCount}}" placeholder="请输入粉丝数" placeholder-style='color:#ccc' style='padding-left:20rpx' bindinput="fansInput" data-value=' fansCount' disabled="{{isforbiden}}"></input>
+                    </view>
+                </view>
+            </view>
+        
+        </view>
+
+        <view class="myself" >
+              <view class="container_header">其他信息</view>
+            <view class="myself_item">
+             <block wx:for="{{arr}}" wx:key='i' wx:for-item='i'>
+                <view class="city">
+                    <view class="city_item">
+                        <view><text style='color:red'>*</text>
+                        {{i.key}}:</view>
+                        <view >
+                            <input type="number" wx:if='{{i.type==2}}' placeholder="{{'请输入'+i.key}}" 
+                            placeholder-style='color:#ccc' class='input' value='{{ i.value}}'  bindinput="txtInput" data-id='{{i.uid}}'></input>
+                            <input type="text" wx:if='{{i.type==1}}' placeholder="{{'请输入'+i.key}}"
+                             placeholder-style='color:#ccc' class='input' style='' value='{{ i.value}}'  bindinput="txtInput" data-id='{{i.uid}}' ></input>
+                            <view class="select" wx:if='{{i.type==0}}' >
+                               <view class="name" bindtap='selectItem' data-id='{{i.uid}}'>
+                                 <input type="hidden" value='{{ i.value}}' placeholder="{{'请选择'+i.key}}" 
+                                 placeholder-style='color:#ccc' class='input' disabled="{{true}}" ></input>
+                               </view>
+                             <van-popup show="{{i.open}}" custom-style='proundStyle'safe-area-inset-top='{{true}}'  closeable='{{true}}'  position="bottom" bind:close="closePround">
+                                      <view class="propt_area">
+                                            <block wx:for="{{i.options}}" wx:key='i' wx:for-item='j' wx:for-index="idx">
+                                           <view class="commom {{targetIndex==idx?'hover':''}}" hover-class='hover'    bindtap='selctOptions' data-value='{{[i.uid,j,idx]}}' >
+                                                <view >{{j}}</view>
+                                           </view>
+                                        </block>
+                                      </view>
+                            </van-popup>
+                               
+                            </view>
+                        </view>
+                    </view>
+                </view>
+              </block>
+            </view>
+              <view class="city" style='border:none'>
+                <view class=" message_content">
+                    <view>备注:</view>
+                    <view class="input_content">
+                        <textarea placeholder="{{placeText}}" maxlength='{{1000}}' class='pickname' placeholder-style="color:#ccc; font-size:26rpx" value='{{value}}' bindinput="inputeidt" data-value='value' disabled="{{isBtn}}" />
+                    </view>
+                </view>
+              </view>
+        </view>
+        <view class="sure_area_item">
+            <van-checkbox value="{{ checked1 }}" shape="square" bind:change="onChangeone" icon-size='20px'>
+                <text>我已确认满足粉丝要求:</text>
+                <text style="color:#d81e06">{{inintData.fansMin}}~{{inintData.fansMax}}</text>
+            </van-checkbox>
+            <van-checkbox value="{{ checked2 }}" shape="square" bind:change="onChangetwo" icon-size='20px' class="content_shop">
+                <view>我已确认商单内容:</view>
+                <view class="" hover-class="none" hover-stop-propagation="false" style='color:#d81e06;padding-left:12rpx'>
+                    <text space='true'>{{inintData.introduction}}</text>
+                </view>
+            </van-checkbox>
+            <van-checkbox value="{{ checked4 }}" shape="square" bind:change="onChangefour" icon-size='20px'>
+                <view class="text_style">
+                    我已确认
+                    <text class="word_style">报名账号是本人的账号,</text>
+                    并且会
+                    <text style="color:#d81e06">积极配合执行人按时保质保量完成商单。</text>
+                </view>
+            </van-checkbox>
+        </view>
+    </view>
+    <button class="bt_area" bindtap="enlistHandle" disabled='{{isBtn}}'>报名</button>
+</view>
+<!-- //失败提示 -->
+<van-toast id="van-toast" />
+<van-dialog message="{{message}}" title="提示" show="{{ show }}" show-cancel-button bind:cancel="onClose" bind:confirm="getUserInfo" cancelButtonText="返回上一层" confirmButtonText="去绑定名片" custom-style="font-size:26rpx"></van-dialog>

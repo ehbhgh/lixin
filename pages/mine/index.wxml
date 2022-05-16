@@ -1,0 +1,47 @@
+<view class="container">
+    <!-- //头部标题 -->
+    <view class="box_container">
+        <view class="left_name" bindtap="login">
+            <image class="" src="{{personMessage.avatarUrl}}"></image>
+            <view>{{personMessage.nickName}}</view>
+        </view>
+    </view>
+    <!-- 名片区域 -->
+    <vant-panel>
+        <view class="contact_area">
+            <view class="contact_area_item border_style" bindtap="seeName">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/my_name.png"></image>
+                    <view class="text">我的名片</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="contact_area_item border_style" bindtap="seeShoplist">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/money.png"></image>
+                    <view class="text">我参与的商单</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="contact_area_item border_style" bindtap="aboutMine">
+                <view class="contact_area_image ">
+                    <image src="../../images/icon/about_mine.png"></image>
+                    <view class="text">关于我们</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="contact_area_item" bindtap="linkService">
+                <view class="contact_area_image">
+                    <image src="../../images/icon/contact_service.png"></image>
+                    <view class="text">联系客服</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </vant-panel>
+
+  
+    <!-- 联系客服的弹出框 -->
+    <van-dialog id="van-dialog" />
+ 
+</view>

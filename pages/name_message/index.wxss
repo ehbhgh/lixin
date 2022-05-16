@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.content .header {
+  margin: 30rpx auto 0;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.content .box {
+  margin: 10rpx auto ;
+  font-size: 26rpx;
+}
+.content .box .first {
+  width: 300rpx;
+  height: 100rpx;
+  color: red;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+.content .box .title {
+  width: 600rpx;
+  margin: 20rpx auto 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 42rpx;
+}
+.content .box image {
+  margin: 0 auto;
+  border-radius: 14rpx;
+  box-shadow: 0 0 10rpx 8rpx rgba(65, 61, 61, 0.3);
+}
+.bottom {
+  margin-bottom: 40rpx !important;
+}
